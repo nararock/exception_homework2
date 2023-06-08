@@ -2,7 +2,12 @@ import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
-        System.out.println("Вы ввели строку: " + getString());
+        try {
+            System.out.println("Вы ввели строку: " + getString());
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
     public static String getString() {
